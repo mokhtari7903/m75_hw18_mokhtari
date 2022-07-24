@@ -1,0 +1,17 @@
+.card{
+    width: 80%;
+    display: flex;
+    background-color: rgb(228, 250, 243);
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.card button{
+    border:none;
+    background-color: white;
+    border-radius: 5px;
+}
+.btnDiv{
+    width: 70px;
+    height: 70px;
+    
+}

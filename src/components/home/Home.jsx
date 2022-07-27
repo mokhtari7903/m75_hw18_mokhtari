@@ -56,10 +56,10 @@ function Home(props) {
     
     return ( 
         <>
-        <Header page={page}/>
         {product !== "" && <Product product={product}
         backHome={backHome}
         getObjProduct={getObjProduct} /> }
+        <Header page={page} setPage={changePage}/>
         {page === "home" && <Wrapper cards={props.data} getCard={getProduct}/>}
         {page === "cards" && <Cards cards={cartArray} setNumber={changeNumber}/>}
         <Footer setPage={changePage}/>
@@ -68,3 +68,39 @@ function Home(props) {
 }
 
 export default Home;
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import {Outlet, Link,} from "react-router-dom"
+// function Home() {
+//     return (  
+//         <>
+//         <h2>page Home</h2>
+//         <Link to={"Home/Login"}>Login</Link>
+//         <Link to={"Home/Register"}>Register</Link>
+//         <Link to={"Home/User"}>User</Link>
+//         <Outlet/>
+//         </>
+//     );
+// }
+
+// export default Home;
+
+
+// ReactDOM.render ( 
+//         <>
+//         <Routes>
+                    
+//             <Router path="/Home" element={<Home/>}/>
+                
+//                 <Router path="/login" element={<Login/>}/>
+//                 <Router path="/Register" element={<Register/>}/>
+//                 <Router path="/User" element={<User/>}/>
+//             <Router/>
+                
+//         </Routes>
+//         </>,
+//         document.getElementById("root")
+//      );
+
+
+// export default myApp;

@@ -10,18 +10,18 @@ function Cards({cards, setNumber}) {
 
         {cards.map((card) => {
             return <div key={card.id} className={style.card}>
-                <img src={card.image} alt="image" />
+                <img src={card.image} alt="img" />
 
-                <div >
+                <div className={style.title}>
                 <p>{card.name}</p>
-                <h3>${card.price}</h3>
+                <p><b>${card.price}</b></p>
+                <p className={style.stock}>{card.stock}</p>
                 </div>
-                <p>stock: {card.stock}</p>
                 <div className={style.btnDiv}>
 
-                <button onClick={() => {setNumber(card.id, 1)}}> + </button>
-                <div>number: <span>{card.number}</span></div>
-                <button onClick={() => {setNumber(card.id, -1)}}> - </button>
+                <button className={style.btnD} onClick={() => {setNumber(card.id, -1)}}> - </button>
+                <div><span>{card.number}</span></div>
+                <button className={style.btnI} onClick={() => {setNumber(card.id, 1)}}> + </button>
                 </div>
                     
             </div>

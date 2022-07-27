@@ -8,7 +8,7 @@ function Header(props) {
         <>
         {/* header pro */}
         <div className={style.header}>
-            <img src={icon} alt="" />
+            <img onClick={() => {props.setPage("home")}} src={icon} alt="" />
             {props.page === "home" && <div>
             <p>Lorem ipsum </p>
             <p>Lorem ipsum dolor.</p>
